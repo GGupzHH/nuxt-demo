@@ -7,7 +7,7 @@ export const app = axios.create({
 
 // 利用插件的方式 插件注入的时候回可以获取参数
 export default (a) => {
-  console.log(a)
+  // console.log(a)
   app.interceptors.request.use(function (config) {
     return config
   }, function (error) {
