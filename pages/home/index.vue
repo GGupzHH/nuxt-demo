@@ -77,20 +77,15 @@ import request from 'request'
 export default {
   name: 'HomeIndex',
   async asyncData () {
-      const {
-        data: {
-          tags
-        }
-      } = await request.get('/tags')
-
-      return {
-        tags
-      }
-    },
+    const { tags } = await request.get('/tags')
+    return {
+      tags
+    }
+  },
   data() {
-      return {
+    return {
 
-      };
+    };
   },
   components: {
     PopularTags

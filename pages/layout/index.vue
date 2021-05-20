@@ -29,6 +29,11 @@
               Sign up
             </nuxt-link>
           </li>
+          <li class="nav-item">
+            <nuxt-link class="nav-link" to="/">
+              用户名
+            </nuxt-link>
+          </li>
         </ul>
       </div>
     </nav>
