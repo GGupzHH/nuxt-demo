@@ -36,7 +36,7 @@ export default {
           {
             path: '/setting',
             name: 'UserSetting',
-            component: resolve(__dirname, 'pages/User/setting.vue')
+            component: resolve(__dirname, 'pages/setting/setting.vue')
           },
 
         ]
@@ -44,9 +44,6 @@ export default {
     }
   },
   alias: {
-    request: resolve(__dirname, './util/request.js')
-  },
-  plugins: [
-    '~/plugins/request.js'
-  ]
+    'request': resolve(__dirname, './util/request.js')
+  }
 }
