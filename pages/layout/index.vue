@@ -20,6 +20,11 @@
             </nuxt-link>
           </li>
           <li class="nav-item">
+            <nuxt-link class="nav-link" to="/login">
+              Sign in
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
             <nuxt-link class="nav-link" to="/register">
               Sign up
             </nuxt-link>

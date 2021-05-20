@@ -1,6 +1,8 @@
 /**
  * nuxt 配置文件
  */
+import { resolve } from 'path'
+
 export default {
   router: {
     // 自定义路由表
@@ -17,19 +19,19 @@ export default {
               {
                 // 默认子路由
                 path: '',
-                component: resolve(__dirname, 'pages/Home/')
+                component: resolve(__dirname, 'pages/home/')
               }
             ]
           },
           {
             path: '/login',
             name: 'Login',
-            component: resolve(__dirname, 'pages/Login/index.vue')
+            component: resolve(__dirname, 'pages/login/index.vue')
           },
           {
             path: '/register',
             name: 'Register',
-            component: resolve(__dirname, 'pages/Login/index.vue')
+            component: resolve(__dirname, 'pages/login/index.vue')
           },
           {
             path: '/setting',
@@ -40,6 +42,9 @@ export default {
         ]
       )
     }
+  },
+  alias: {
+    request: resolve(__dirname, './util/request.js')
   },
   plugins: [
     '~/plugins/request.js'
