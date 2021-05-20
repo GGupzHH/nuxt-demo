@@ -14,7 +14,7 @@ export default {
         ...[
           {
             path: '/',
-            component: resolve(__dirname, 'pages/layout/'),
+            component: resolve(__dirname, 'pages/Layout/'),
             children: [
               {
                 // 默认子路由
@@ -32,12 +32,21 @@ export default {
             path: '/register',
             name: 'Register',
             component: resolve(__dirname, 'pages/login/index.vue')
-          }
+          },
+          {
+            path: '/setting',
+            name: 'UserSetting',
+            component: resolve(__dirname, 'pages/User/setting.vue')
+          },
+
         ]
       )
     }
   },
   alias: {
     request: resolve(__dirname, './util/request.js')
-  }
+  },
+  plugins: [
+    '~/plugins/request.js'
+  ]
 }
