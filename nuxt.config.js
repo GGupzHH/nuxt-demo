@@ -19,19 +19,19 @@ export default {
               {
                 // 默认子路由
                 path: '',
-                component: resolve(__dirname, 'pages/Home/')
+                component: resolve(__dirname, 'pages/home/')
               }
             ]
           },
           {
             path: '/login',
             name: 'Login',
-            component: resolve(__dirname, 'pages/Login/index.vue')
+            component: resolve(__dirname, 'pages/login/index.vue')
           },
           {
             path: '/register',
             name: 'Register',
-            component: resolve(__dirname, 'pages/Login/index.vue')
+            component: resolve(__dirname, 'pages/login/index.vue')
           }
         ]
       )
