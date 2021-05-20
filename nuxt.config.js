@@ -1,6 +1,8 @@
 /**
  * nuxt 配置文件
  */
+import { resolve } from 'path'
+
 export default {
   router: {
     // 自定义路由表
@@ -34,5 +36,8 @@ export default {
         ]
       )
     }
+  },
+  alias: {
+    request: resolve(__dirname, './util/request.js')
   }
 }

@@ -1,31 +1,45 @@
 <template>
-  <div class="home-page">
+  <div class="profile-page">
 
-    <div class="banner">
+    <div class="user-info">
       <div class="container">
-        <h1 class="logo-font">conduit</h1>
-        <p>A place to share your knowledge.</p>
+        <div class="row">
+
+          <div class="col-xs-12 col-md-10 offset-md-1">
+            <img src="http://i.imgur.com/Qr71crq.jpg" class="user-img" />
+            <h4>Eric Simons</h4>
+            <p>
+              Cofounder @GoThinkster, lived in Aol's HQ for a few months, kinda looks like Peeta from the Hunger Games
+            </p>
+            <button class="btn btn-sm btn-outline-secondary action-btn">
+              <i class="ion-plus-round"></i>
+              &nbsp;
+              Follow Eric Simons 
+            </button>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <div class="container page">
+    <div class="container">
       <div class="row">
 
-        <div class="col-md-9">
-          <div class="feed-toggle">
+        <div class="col-xs-12 col-md-10 offset-md-1">
+          <div class="articles-toggle">
             <ul class="nav nav-pills outline-active">
               <li class="nav-item">
-                <a class="nav-link disabled" href="">Your Feed</a>
+                <a class="nav-link active" href="">My Articles</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="">Global Feed</a>
+                <a class="nav-link" href="">Favorited Articles</a>
               </li>
             </ul>
           </div>
 
           <div class="article-preview">
             <div class="article-meta">
-              <a href="profile.html"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
+              <a href=""><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
               <div class="info">
                 <a href="" class="author">Eric Simons</a>
                 <span class="date">January 20th</span>
@@ -43,7 +57,7 @@
 
           <div class="article-preview">
             <div class="article-meta">
-              <a href="profile.html"><img src="http://i.imgur.com/N4VcUeJ.jpg" /></a>
+              <a href=""><img src="http://i.imgur.com/N4VcUeJ.jpg" /></a>
               <div class="info">
                 <a href="" class="author">Albert Pai</a>
                 <span class="date">January 20th</span>
@@ -56,14 +70,16 @@
               <h1>The song you won't ever stop singing. No matter how hard you try.</h1>
               <p>This is the description for the post.</p>
               <span>Read more...</span>
+              <ul class="tag-list">
+                <li class="tag-default tag-pill tag-outline">Music</li>
+                <li class="tag-default tag-pill tag-outline">Song</li>
+              </ul>
             </a>
           </div>
+
+
         </div>
 
-        <!-- Tags -->
-        <div class="col-md-3">
-          <PopularTags :tags="tags"/>
-        </div>
       </div>
     </div>
 
@@ -71,42 +87,25 @@
 </template>
 
 <script>
-import PopularTags from './components/PopularTags'
-
-import request from 'request'
 export default {
-  name: 'HomeIndex',
-  async asyncData () {
-      const {
-        data: {
-          tags
-        }
-      } = await request.get('/tags')
+    name: 'Profile',
+    data() {
+        return {
 
-      return {
-        tags
-      }
+        };
     },
-  data() {
-      return {
+    created() {
 
-      };
-  },
-  components: {
-    PopularTags
-  },
-  created() {
+    },
+    mounted() {
 
-  },
-  mounted() {
+    },
+    methods: {
 
-  },
-  methods: {
-
-  }
+    }
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
