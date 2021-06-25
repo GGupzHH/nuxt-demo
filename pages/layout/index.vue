@@ -57,15 +57,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
     name: 'LayoutIndex',
     data() {
-        return {
+      return {
 
-        };
+      };
+    },
+    computed: {
+      ...mapState({
+        userInfo: 'userInfo'
+      })
     },
     created() {
-
+      console.log(this.userInfo.username)
     },
     mounted() {
 
